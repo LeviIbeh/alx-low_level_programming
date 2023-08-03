@@ -1,4 +1,4 @@
-#include "msin.h"
+#include "main.h"
 /**
  * helper - helps decide if i'm right
  * @i: integer to guess
