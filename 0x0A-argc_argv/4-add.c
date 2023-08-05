@@ -25,7 +25,7 @@ int StringCheck(char *s)
  * main - main function
  * @argc: argumentc
  * @argv: vector of arguments
- *Return: always 0
+ * Return: always 0
  */
 int main(int argc, char  *argv[])
 {
