@@ -31,13 +31,12 @@ char *argstostr(int ac, char **av)
 	k = 0;
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
-		{
-			s[k] = av[i][j];
-			k++;
-		}
-		s[k] = '\n';
+	for (j = 0; av[i][j] != '\0'; j++)
+	{
+		s[k] = av[i][j];
 		k++;
+	}
+		s[k++] = '\n';
 	}
 
 	s[k] = '\0';
