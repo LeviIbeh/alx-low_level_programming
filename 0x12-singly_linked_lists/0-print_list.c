@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stddef.h>
 /**
- * project: a program that prints a list
+ * print_list - prints a list
  * @h: list head
  * Return: number of elements
  */
@@ -18,7 +18,7 @@ size_t print_list(const list_t *h)
 		else
 			printf("[%d] %s\n", h->len, h->str);
 		h = h->next;
-		sount++:
+		count++;
 	}
 	return (count);
 }
