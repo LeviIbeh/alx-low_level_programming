@@ -1,4 +1,7 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 /**
  * free_listint - frees the list
  * @head: head of struct
@@ -6,14 +9,14 @@
  */
 void free_listint(listint_t *head)
 {
-	listint_t *tmp;
+	listint_t *temporary;
 
 
 	while (head != NULL)
 	{
-		tmp = head;
+		temporary = head;
 		free(head);
-		head = tmp->next;
+		head = temporary->next;
 	}
 
 }
