@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stddef.h>
-#include <stdio.h>
 /**
  * print_listint - prints integers in a list
  * @h: struct listint_t type
@@ -17,5 +15,5 @@ size_t print_listint(const listint_t *h)
 		h = h->next;
 	}
 
-	return(count);
+	return (count);
 }
