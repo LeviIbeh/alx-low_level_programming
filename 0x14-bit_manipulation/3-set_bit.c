@@ -3,7 +3,8 @@
 /**
  * set_bit - sets a bit value
  * @n: accessed integer
- *
+ * @index: index to go through
+ * Return: error value
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
