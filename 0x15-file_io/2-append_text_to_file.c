@@ -1,30 +1,33 @@
 #include "main.h"
+
 /**
- * create_file - creates a file
- * @filename: the name of the file to grab
- * @text_content: added contents
- * Return: conditional value for outcome
+ * append_text_to_file - add text to the end of a file
+ * @filename: filename pointer
+ * @text_content: contents to add
+ *
+ * Return: Conditional value to be set based on output
  */
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
-	int fn, len = 0;
-	long int writer;
+	int o, w, len = 0;
 
 	if (filename == NULL)
 		return (-1);
-	fn = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	if (fn == -1)
-		return (-1);
+
 	if (text_content != NULL)
 	{
-
-		while (text_content[len])
+		for (len = 0; text_content[len];)
 			len++;
-		writer = write(fn, text_content, len);
-		if (writer == -1)
-			return (-1);
 	}
-	if (close(fn) == -1)
+
+	o = open(filename, O_WRONLY | O_APPEND);
+	w = write(o, text_content, len);
+
+	if (o == -1 || w == -1)
 		return (-1);
+
+	close(o);
+
 	return (1);
 }
+
